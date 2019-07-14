@@ -4,7 +4,7 @@ import requests
 import json
 from os import system
 # import telebot
-import schedule, time
+# import schedule, time
 
 dirAtivos = 'C:/Users/jp/Desktop/scrape/ativos.txt'
 dirValores = 'C:/Users/jp/Desktop/scrape/valores.txt'
@@ -46,12 +46,12 @@ print('\nLista =', out, '\n')
 with open(dirValores, 'w') as f:
     f.write('\n'.join(map(str, out)))  # Salva a lista final no .txt
 
-#def telegram():
-   # for i in range(len(ativos)):
-  #      tb.send_message(chatId, out[i])
- #   tb.polling(timeout=0)
+# def telegram():
+#    for i in range(len(ativos)):
+#        tb.send_message(chatId, out[i])
+#   tb.polling(timeout=0)
 
-#telegram()
+# telegram()
 
 # schedule.every(1).minutes.do(telegram)
 # while True:
