@@ -3,19 +3,19 @@
 import requests
 import json
 from os import system
-import telebot
+# import telebot
 import schedule, time
 
 dirAtivos = 'C:/Users/jp/Desktop/scrape/ativos.txt'
 dirValores = 'C:/Users/jp/Desktop/scrape/valores.txt'
-dirBot = 'C:/Users/jp/Desktop/scrape/bot.txt' # Token do bot p/ Telegram (BotFather)
+# dirBot = 'C:/Users/jp/Desktop/scrape/bot.txt' # Token do bot p/ Telegram (BotFather)
 dirApi = 'C:/Users/jp/Desktop/scrape/api.txt'  # Token do api do WorldTradingData
 site = 'https://api.worldtradingdata.com/api/v1/stock?symbol='
-#chatId = ''
+# chatId = ''
 
-with open(dirBot, 'r') as f:
-    token_bot = f.read()
-tb = telebot.TeleBot(token_bot)
+# with open(dirBot, 'r') as f:
+#    token_bot = f.read()
+# tb = telebot.TeleBot(token_bot)
 
 with open(dirApi, 'r') as f:
     token_api = f.read()
