@@ -4,9 +4,9 @@ from math import ceil, floor
 import requests
 import json
 
-dirAtivos = 'C:/Users/jp/Desktop/scrape/di.txt'
-dirValores = 'C:/Users/jp/Desktop/scrape/valores.txt'
-dirApi = 'C:/Users/jp/Desktop/scrape/api.txt'
+dirAtivos = 'C:/scrape/ativos.txt'
+dirValores = 'C:/scrape/valores.txt'
+dirApi = 'C:/scrape/api.txt'
 site = 'https://api.worldtradingdata.com/api/v1/stock?symbol='
 
 def scrape(lista):
