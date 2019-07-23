@@ -67,4 +67,4 @@ with open(dirAtivos, 'r') as f, open(dirApi, 'r') as g, open(dirValores, 'w') as
         scrape(ativos)
 
 print('')
-system('\npause')
+system('pause')
