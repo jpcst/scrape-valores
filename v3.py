@@ -43,7 +43,7 @@ with open(dirAtivos, 'r') as f, open(dirApi, 'r') as g, open(dirValores, 'w') as
     if (m > 5):
         iter = ceil(m/5)
         print('Iterações:',iter)
-        totI = iter * 5
+        #totI = iter * 5
         #listaVazia = 5 - (totI - m)
         listaCheia = floor(m/5)
         resto = m % 5
