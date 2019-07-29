@@ -2,7 +2,6 @@
 
 import scpr3
 import telebot
-import schedule
 
 dirId = 'C:/Users/jp/Desktop/scrape/id.txt'
 dirBot = 'C:/Users/jp/Desktop/scrape/bot.txt'
@@ -15,9 +14,6 @@ tb = telebot.TeleBot(api_bot)
 
 def telegram():
     tb.send_message(chatId, list)
-
-schedule.every().day.at("03:08").do(telegram)
-
 
 v = scpr3.main()
 
