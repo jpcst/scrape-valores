@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# from os import system
+from os import system
 from math import ceil, floor
 import requests
 import json
@@ -68,4 +68,4 @@ with open(dirAtivos, 'r') as f, open(dirApi, 'r') as g, open(dirValores, 'w') as
         scrape(ativos)
 
 print('')
-# system('pause')
+system('pause')
