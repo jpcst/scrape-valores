@@ -49,6 +49,9 @@ def main():
             venda = list_start[i]*list_p_float[i]/list_i[i]
             list_end.append(venda)
         print(list_end) # Lista dos valores na hora da venda
+
+        list_start = [str(i) for i in list_start]
+        list_end = [str(i) for i in list_end]
         
         dif = []
         for i in range(len(list_i)):
@@ -58,10 +61,10 @@ def main():
         for i in range(0, n, 1):
             # v = ativos[i].replace('.SA', '') + ' ' + list_p[i]  # Ativos e valores
             # v = list_p[i]
-            v = list_n[i] + ' ' + list_p[i] + ' (' + dif[i] + '%)'
+            v = list_n[i] + ' ' + list_p[i] + ' (' + dif[i] + '%)' + ' ' + list_start[i] + ' -> ' + list_end[i]
             # v = ativos[i] + ' ' + list_p[i]
             out.append(v)  # Lista final
-        print('Lista =', out)
+        print(out)
 
         h.writelines('\n'.join(map(str, out)) + '\n') # Salva no txt
 
