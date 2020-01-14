@@ -12,6 +12,7 @@ def main():
     dirValores = '/home/jpcst/scrape-valores/valores.txt'
     dirApi = '/home/jpcst/scrape-valores/api.txt'
     dirIni = '/home/jpcst/scrape-valores/inicio.txt'
+    dir_start = '/home/jpcst/scrape-valores/start.txt'
     site = 'https://api.worldtradingdata.com/api/v1/stock?symbol='
 
     def scrape(lista):
@@ -37,6 +38,17 @@ def main():
 
         list_i = [float(i) for i in list_i] # Inicial
         list_p_float = [float(i) for i in list_p] # Final
+        
+        with open(dir_start, 'r') as f:
+            list_start = f.read().split(',')
+        list_start = [float(i) for i in list_start]
+        print(list_start) # Lista dos valores pago na compra
+        
+        list_end = []
+        for i in range(len(list_start)):
+            venda = list_start[i]*list_p_float[i]/list_i[i]
+            list_end.append(venda)
+        print(list_end) # Lista dos valores na hora da venda
         
         dif = []
         for i in range(len(list_i)):
